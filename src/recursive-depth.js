@@ -14,13 +14,14 @@ import { NotImplementedError } from '../extensions/index.js';
  */
 export default class DepthCalculator {
   calculateDepth( arr ) {
-    let output = 1;
-   for(let i =0;i<arr.length; i++){
+    console.log(arr);
+    let depth = 1;
+    for(let i =0;i<arr.length; i++){
      if(Array.isArray(arr[i])){
-      output+=calculateDepth(arr[i]);
+       arr = arr.flat();
+       depth+=this.calculateDepth(arr);
      }
    }
-   console.log(output)
-   return output;
+   return depth;
   }
 }
