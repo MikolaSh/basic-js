@@ -35,3 +35,5 @@ export default function getSumOfDigits( n ) {
 
 
 }
+
+///SOLVED!

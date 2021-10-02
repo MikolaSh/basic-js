@@ -24,3 +24,4 @@ export default function deleteDigit( n ) {
   console.log(n)
   return Number(n);
 }
+//SOLVED

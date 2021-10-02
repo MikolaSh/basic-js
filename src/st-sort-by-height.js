@@ -36,3 +36,4 @@ export default function sortByHeight(arr) {
   console.log(arr);
   return arr;
 }
+//SOLVED
