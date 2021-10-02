@@ -16,7 +16,7 @@ import { NotImplementedError } from '../extensions/index.js';
 export default function transform(arra) {
   console.log("AAA")
   let arr=arra;
-  console.log(arr)
+  console.log(arra)
   if (!(arr instanceof Array)){
     throw new Error("'arr' parameter must be an instance of the Array!")
   }
@@ -29,21 +29,6 @@ export default function transform(arra) {
     if(arr[i]==='--double-prev'){arr[i]=arr[i-1];}
     if(arr[i]==='--discard-prev'){arr.splice(i-1,2);}
     if(arr[i]==='--discard-next'){arr.splice(i,2);}
-    /*switch(arr[i]){
-      case '--double-next':
-        arr[i]=arr[i+1];
-        break;
-      case '--double-prev':
-        console.log("WORK!");
-        arr[i]=arr[i-1];
-        break;
-      case '--discard-prev':
-        arr.splice(i-1,2);
-        break;
-      case '--discard-next':
-        arr.splice(i,2);
-        break;
-    }*/
   }
   return arr;
 }
